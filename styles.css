@@ -297,11 +297,13 @@ a {
 }
 
 .secNavbar .navlinks .menu .drop {
+    overflow-y: scroll !important;
+    max-height: 100%;
     position: absolute;
     opacity: 0;
     visibility: hidden;
     z-index: -10000;
-    min-width: 100%;
+    width: 100%;
     top: 63px;
     left: 0;
     background: #3e619b;
@@ -533,11 +535,10 @@ a {
         align-items: flex-start;
         padding: 0;
         padding-left: 10px;
+        gap: 20px;
     }
 
-    .secNavbar .navlinks .navMenu .menu:hover .drop {
-        top: 0;
-    }
+ 
 
 
     .hamburger {
@@ -556,7 +557,7 @@ a {
         position: fixed;
         top: 0;
         right: 0;
-        background: #3e619b;
+        background: #042c54;
         height: 100%;
         width: 100%;
         flex-direction: column;
