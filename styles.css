@@ -532,6 +532,10 @@ a {
         gap: 50px;
     }
 
+    .padding-section {
+        padding: 2rem 4rem;
+    }
+
     .secNavbar .navlinks .menu .drop {
         flex-direction: column;
         justify-content: flex-start !important;
@@ -864,6 +868,11 @@ a {
     margin-top: 20px;
 }
 
+.shoppingWithUs-talk .shoppingWithUs-talk-text h3 {
+    width: 100% !important;
+    text-align: center;
+}
+
 .shoppingWithUs-talk .shoppingWithUs-talk-text p {
     width: 350px;
     text-align: center;
@@ -879,8 +888,6 @@ a {
         width: 320px !important;
     }
 
-    .shoppingWithUs-talk .shoppingWithUs-talk-text h3 {
-        padding: 15px 0;
-    }
+
 
 }
