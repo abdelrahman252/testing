@@ -665,6 +665,7 @@ a {
     -o-transform: translateX(0em);
 }
 
+/* products */
 .products-section {
     width: 100%;
     display: flex;
@@ -814,4 +815,61 @@ a {
     -moz-transform: translateY(0em);
     -ms-transform: translateY(0em);
     -o-transform: translateY(0em);
+}
+
+/* products */
+
+/* talk */
+.shoppingWithUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.shoppingWithUs .shoppingWithUs-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shoppingWithUs .shoppingWithUs-header h2 {
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+
+.shoppingWithUs .shoppingWithUs-header p {
+    text-align: center;
+    width: 65%;
+    color: #444;
+}
+
+.shoppingWithUs-talk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 50px;
+}
+
+.shoppingWithUs-talk .shoppingWithUs-talk-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.shoppingWithUs-talk .shoppingWithUs-talk-text h3 {
+    margin: 15px 0;
+}
+
+.shoppingWithUs-talk .shoppingWithUs-talk-text p {
+    width: 350px;
+    text-align: center;
+    color: #444;
 }
