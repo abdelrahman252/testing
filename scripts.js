@@ -1,7 +1,6 @@
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".navMenu");
 const links = document.querySelectorAll(".navMenu > li");
-console.log(links);
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("open");
@@ -11,3 +10,14 @@ hamburger.addEventListener("click", () => {
 
   hamburger.classList.toggle("toggle");
 });
+
+const isStuck = document.querySelector(".logo-mark");
+
+console.log(isStuck);
+window.onscroll = function () {
+  if (window.scrollY >= 130) {
+    isStuck.classList.add("is-stuck");
+  } else {
+    isStuck.classList.remove("is-stuck");
+  }
+};
