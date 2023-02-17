@@ -40,10 +40,10 @@ a {
 .firstNavbar {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
+    gap: 71px;
 }
 
 .firstNavbar .logoSection {
@@ -208,10 +208,8 @@ a {
     position: relative;
     position: sticky;
     z-index: 10;
-    top: 0;
+    top: -1px;
 }
-
-
 
 .secNavbar .navlinks .navMenu {
     display: flex;
@@ -237,7 +235,6 @@ a {
     padding: 20px;
     display: block;
 }
-
 
 .secNavbar .navlinks .navMenu a span {
     position: relative;
@@ -535,7 +532,7 @@ a {
 
 @media screen and (max-width: 990px) {
     .firstNavbar {
-        gap: 40px;
+        gap: 50px;
     }
 
     .secNavbar .navlinks .menu .drop {
@@ -696,8 +693,22 @@ a {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+
 .products-section .product .productImg {
     position: relative;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.products-section .product:hover .productImg {
+    transform: scale(.98);
+    -webkit-transform: scale(.98);
+    -moz-transform: scale(.98);
+    -ms-transform: scale(.98);
+    -o-transform: scale(.98);
 }
 
 .products-section .product .productImg::after {
