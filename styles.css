@@ -9,7 +9,7 @@
     --color-blog: #042c54;
     --color-text: #81AFDD;
     --color-subtext: #FF8A71;
-    --transition: all .2s ease-in-out;
+    --transition: all .3s ease-in-out;
     --transition-animation: transform 1s ease;
 }
 
@@ -51,6 +51,8 @@ footer .logoSection {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    flex: 1 1 1;
+
 }
 
 footer .logoSection {
@@ -339,25 +341,20 @@ footer .footer-row .footer-links ul a:hover::before {
 }
 
 
-
 .secNavbar .navlinks .navMenu .menu .drop {
-    min-height: 100%;
+    height: 870px;
+    width: 100%;
     position: absolute;
     opacity: 0;
     visibility: hidden;
     z-index: -10000;
-    width: 100%;
     top: 63px;
     left: 0;
-    background: #3e619b;
+    background: #000000b5;
     /*background: #004e9a;
     */
     /*background: #428cd4;
     */
-    padding: 2rem 6rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     transform: translateY(-3em);
     -webkit-transform: translateY(-3em);
     -moz-transform: translateY(-3em);
@@ -376,13 +373,21 @@ footer .footer-row .footer-links ul a:hover::before {
     visibility: visible;
     opacity: 1;
     z-index: 10000;
-
     transform: translateY(0);
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transition-delay: 0s, 0s, 0.3s;
+}
+
+.secNavbar .navlinks .navMenu .menu .drop-content {
+    background: #3e619b;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 6rem;
 }
 
 .secNavbar .navlinks .menu .drop ul,
@@ -1039,7 +1044,7 @@ footer .social a::before {
 }
 
 footer .social a:first-child:before {
-    background: #3b4398;
+    background: #385898;
 }
 
 footer .social a:nth-child(2)::before {
@@ -1259,3 +1264,206 @@ footer .footer-copyright p {
         opacity: 1 !important;
     }
 }
+
+.buton {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    background: linear-gradient(#0082ca, #033e7a);
+    padding: 3px;
+    color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(3em);
+    -webkit-transform: translateY(3em);
+    -moz-transform: translateY(3em);
+    -ms-transform: translateY(3em);
+    -o-transform: translateY(3em);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.buton.stuck {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+.buton:hover {
+    animation: start .5s linear infinite;
+    -webkit-animation: start .5s linear infinite;
+}
+
+@keyframes start {
+    to {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+    }
+}
+
+/* cart */
+
+
+.cart {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 400px;
+    background: #ffffff;
+    z-index: 999999999999999;
+    box-shadow: rgba(0, 0, 0, 0.74) 0px 3px 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(3em);
+    -webkit-transform: translateX(3em);
+    -moz-transform: translateX(3em);
+    -ms-transform: translateX(3em);
+    -o-transform: translateX(3em);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+
+}
+
+.cart.opened {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0em);
+    -webkit-transform: translateX(0em);
+    -moz-transform: translateX(0em);
+    -ms-transform: translateX(0em);
+    -o-transform: translateX(0em);
+}
+
+.cart .cart-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 2px solid #ccc;
+}
+
+.cart .cart-top span {
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #0858a2;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.cart .cart-top span:hover {
+    color: red;
+}
+
+.cart .cart-top span:active {
+    animation: roll .4s linear infinite;
+    -webkit-animation: roll .4s linear infinite;
+}
+
+@keyframes roll {
+    to {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+.cart .cart-content {
+    margin-top: 50px;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+.cart .cart-content span {
+    color: #ccc !important;
+}
+
+.cart .cart-content a {
+    display: block;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-weight: 500;
+}
+
+
+.content {
+    position: relative;
+}
+
+.content h2 {
+    color: #fff;
+    font-size: 50px;
+}
+
+.content h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #000000;
+}
+
+.content h2:nth-child(2) {
+    color: #000000;
+    animation: animate 4s ease-in-out infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 45%,
+                16% 44%,
+                33% 50%,
+                54% 60%,
+                70% 61%,
+                84% 59%,
+                100% 52%,
+                100% 100%,
+                0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%,
+                15% 65%,
+                34% 66%,
+                51% 62%,
+                67% 50%,
+                84% 45%,
+                100% 46%,
+                100% 100%,
+                0% 100%);
+    }
+}
+
+.secNavbar .menu .drop {}
